@@ -29,12 +29,12 @@ public class DijkstraTest {
        END = points.get(199).toString();
        
        System.out.println(START + " " +END);
-       for(int j=0; j<199; j++) {
+       for(int j=0; j<200; j++) {
            System.out.println(points.get(j).toString());
             for(int i=j; i<199; i++) {
                 int d = (int)Math.sqrt((points.get(i+1).getX()-points.get(j).getX())*(points.get(i+1).getX()-points.get(j).getX()) + 
                         (points.get(i+1).getY()-points.get(j).getY())*(points.get(i+1).getY()-points.get(j).getY()));
-                if ((j==0 && i==0) || (j==198 && i==198) || d<1000) {
+                if ((j==0 && i==0) || (j==198 && i==198) || d<100) {
                     System.out.println("d: " + d);
 //                    GRAPH[arrayCounter] = new Graph.Edge(points.get(j).toString(), points.get(i+1).toString(), 
 //                            (int)Math.sqrt((points.get(i+1).getX()-points.get(j).getX())*(points.get(i+1).getX()-points.get(j).getX()) + 
